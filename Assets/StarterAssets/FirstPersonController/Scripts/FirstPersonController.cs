@@ -10,8 +10,11 @@ namespace StarterAssets
 	[RequireComponent(typeof(PlayerInput))]
 #endif
 	public class FirstPersonController : MonoBehaviour
+
 	{
 		[Header("Player")]
+		public float delay;
+		public AudioSource Footsteps;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -192,10 +195,27 @@ namespace StarterAssets
 			{
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
-			}
+				//Debug.Log("audio?");yes
+				if (!Footsteps.isPlaying && _input.sprint)
+				{//wse
+					Footsteps.volume = 1.0f;
+					Footsteps.pitch = 1.5f;
+					Footsteps.Play();
+					Debug.Log("sprint");
+				}
+				else if (!Footsteps.isPlaying)
+				{
+					Footsteps.volume = .45f;
+					Footsteps.pitch = 1.0f;
+					Footsteps.Play();
+				}
+				//Footsteps.PlayDelayed(delay);
+
+				}
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			
 		}
 
 		private void JumpAndGravity()
