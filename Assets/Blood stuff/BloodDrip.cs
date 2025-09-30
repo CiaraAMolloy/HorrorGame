@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class BloodDrip : MonoBehaviour
@@ -33,26 +34,31 @@ public class BloodDrip : MonoBehaviour
         {
             Vector3 spawnPos = hit.point + Vector3.up * offsetAboveGround;
             GameObject blood = Instantiate(BloodPrefab, spawnPos, Quaternion.identity);
+
             StartCoroutine(ColourChange(blood));
+
+            // StartCoroutine(DebugDetectionSphere(spawnPos, 10f, 0.5f, bloodTimer, Color.green)); //This was a debug test for the radius of detection on the blood that i removed
+
         }
     }
 
     System.Collections.IEnumerator ColourChange(GameObject blood) //this the blood changing colour, when it gets to the end of the change it destroys itself
-{
-    Renderer rend = blood.GetComponentInChildren<Renderer>();
-
-    float timer = 0f;
-    while (timer < bloodTimer)
     {
-        timer += Time.deltaTime;
-        float t = timer / bloodTimer;
+        Renderer rend = blood.GetComponentInChildren<Renderer>();
 
-        rend.material.color = Color.Lerp(startTint, endTint, t);
+        float timer = 0f;
+        while (timer < bloodTimer)
+        {
+            timer += Time.deltaTime;
+            float t = timer / bloodTimer;
 
-        yield return null;
+            rend.material.color = Color.Lerp(startTint, endTint, t);
+
+            yield return null;
+        }
+
+        Destroy(blood);
     }
 
-    Destroy(blood);
-}
 
 }
