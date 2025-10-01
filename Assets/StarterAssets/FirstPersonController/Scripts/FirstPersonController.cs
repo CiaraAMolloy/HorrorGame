@@ -2,7 +2,7 @@
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
-
+//to find where to put sound things go to Sound123 with find
 namespace StarterAssets
 {
 	[RequireComponent(typeof(CharacterController))]
@@ -193,11 +193,13 @@ namespace StarterAssets
 			// if there is a move input rotate player when the player is moving
 			if (_input.move != Vector2.zero)
 			{
+				//Sound123
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
 				//Debug.Log("audio?");yes
+				//this plays the sound for foot steps its also where we are gonna put code to spawn sounds
 				if (!Footsteps.isPlaying && _input.sprint)
-				{//wse
+				{
 					Footsteps.volume = 1.0f;
 					Footsteps.pitch = 1.5f;
 					Footsteps.Play();
