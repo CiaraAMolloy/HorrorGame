@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoToSound : MonoBehaviour
+public class GoToSound : State
 {
-    // Start is called before the first frame update
-    void Start()
+     //put the states it goes to here
+   // public BloodSeek BS; not gonna go to this 
+   
+    public GonnaGetYou GGY;
+    public RandomPatrol Patrol;
+
+    //run
+    public override State RunCurrentState()
     {
-        
+        if (false)
+        {
+            //if "sees" player
+            return GGY;
+        }
+        if (false)
+        { //After find sound patrol
+            return patrol;
+            
+        }
+      
+
+
+        return this;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GonnaGetYou : MonoBehaviour
+public class GonnaGetYou : State
 {
-    // Start is called before the first frame update
-    void Start()
+    public RandomPatrol patrol;
+    public override State RunCurrentState()
     {
-        
-    }
+       
+        if (false)
+        { //After player gets away/time gone
+            return patrol;
+            
+        }
+      
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        return this;
+
     }
 }
