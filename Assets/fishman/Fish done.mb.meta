@@ -16,7 +16,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'RightUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -82,7 +83,102 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Fish done(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere1
+      parentName: Fish done(Clone)
+      position: {x: 0.0027978527, y: -0.0034471487, z: 0.16235934}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8666667, y: 1.5222222, z: 1}
+    - name: transform2
+      parentName: pSphere1
+      position: {x: -1.1090531e-18, y: -0.002431579, z: 5.0954025e-20}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube1
+      parentName: Fish done(Clone)
+      position: {x: 0.5097131, y: 0.00041277884, z: 0.005}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 18, z: 1}
+    - name: pCube2
+      parentName: Fish done(Clone)
+      position: {x: 0.0031055193, y: 0.11675677, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 3.7492247, y: 5.4433184, z: 3.7492247}
+    - name: transform1
+      parentName: pCube2
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface1
+      parentName: Fish done(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere2
+      parentName: Fish done(Clone)
+      position: {x: 0.0031055193, y: 0.09566842, z: -0.0010800435}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform7
+      parentName: pSphere2
+      position: {x: -0.0031055193, y: -0.09566842, z: 0.0010800435}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pTorus1
+      parentName: Fish done(Clone)
+      position: {x: 0.0047930805, y: 0.14622559, z: -0.004418425}
+      rotation: {x: 0, y: -0, z: -0.093897276, w: 0.9955819}
+      scale: {x: 1.2214477, y: 0.67858785, z: 1.1}
+    - name: transform3
+      parentName: pTorus1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere3
+      parentName: Fish done(Clone)
+      position: {x: 0.011012891, y: 0.17386732, z: 0.0037987807}
+      rotation: {x: 0.41259113, y: -0, z: -0, w: 0.9109164}
+      scale: {x: 0.4063746, y: 0.4063746, z: 0.4063746}
+    - name: transform5
+      parentName: pSphere3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: group
+      parentName: Fish done(Clone)
+      position: {x: 0.011012892, y: 0.17386732, z: -0.013600899}
+      rotation: {x: -0.6652981, y: 0, z: -0, w: 0.7465778}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pSphere3
+      parentName: group
+      position: {x: -0.0000000011920929, y: 0, z: 5.9604643e-10}
+      rotation: {x: 0.41259113, y: -0, z: -0, w: 0.9109164}
+      scale: {x: 0.4063746, y: 0.4063746, z: 0.4063746}
+    - name: transform4
+      parentName: pasted__pSphere3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere4
+      parentName: Fish done(Clone)
+      position: {x: 0.010495239, y: 0.19442421, z: -0.0065854453}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.25459942, y: 0.25459942, z: 0.25459942}
+    - name: transform6
+      parentName: pSphere4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pSphere5
+      parentName: Fish done(Clone)
+      position: {x: 0.0031055212, y: 0.09833976, z: -0.0015963507}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -93,11 +189,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
