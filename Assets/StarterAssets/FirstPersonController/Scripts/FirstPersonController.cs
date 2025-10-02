@@ -118,7 +118,9 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
 		}
+	 
 
 		private void LateUpdate()
 		{
@@ -203,7 +205,7 @@ namespace StarterAssets
 					Footsteps.volume = 1.0f;
 					Footsteps.pitch = 1.5f;
 					Footsteps.Play();
-					Debug.Log("sprint");
+					//Debug.Log("sprint");
 				}
 				else if (!Footsteps.isPlaying)
 				{
