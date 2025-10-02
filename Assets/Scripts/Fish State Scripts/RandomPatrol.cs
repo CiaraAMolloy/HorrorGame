@@ -10,6 +10,8 @@ public class RandomPatrol : State
     public GoToSound GTS;
     public GonnaGetYou GGY;
 
+    public Logic L;
+
     //run
     public override State RunCurrentState()
     {
@@ -17,11 +19,11 @@ public class RandomPatrol : State
         {//if "sees" player
             return GGY;  
         }
-        else if (false)
+         if (L.GetHeardsound())
         {//if hear sound
             return GTS;
         }
-        else if (false)
+         if (false)
         { //if find blood
             return BS;
          }

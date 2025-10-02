@@ -14,7 +14,9 @@ namespace StarterAssets
 	{
 		[Header("Player")]
 		public float delay;
+		public Soundspawner spawnsound;
 		public AudioSource Footsteps;
+		public AudioSource aaa;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -118,6 +120,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Yell();
 
 		}
 	 
@@ -154,6 +157,21 @@ namespace StarterAssets
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
 			}
+		}
+		private void Yell(){
+
+			if(Input.GetKeyDown(KeyCode.Y))
+			{	if(!aaa.isPlaying ){aaa.Play();}
+					
+			//play yell?
+				Debug.Log("aaaaaaaahhhhhh");
+			
+				spawnsound.spawnSound(100,this.transform.position);//if (!Footsteps.isPlaying && _input.sprint);
+				
+
+			}
+
+
 		}
 
 		private void Move()

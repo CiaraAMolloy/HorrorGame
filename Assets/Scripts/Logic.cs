@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Logic : MonoBehaviour
 {
+   public bool HeardASound;
+   public float sus;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +29,15 @@ public class Logic : MonoBehaviour
     {     Debug.Log("button press");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    
+    }
+    public bool GetHeardsound()
+    {return HeardASound;}
+    //public void checkHeardsound();
+
+    public float getSus(){
+        return sus;
+    }
+    public void AddSus(float time){
+        sus+=time;
     }
 }

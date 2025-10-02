@@ -20,7 +20,7 @@ public class BloodSeek : State
         {//if "sees" player
             return GGY;
         }
-        else if (false)
+         if (false)
         {//if hear sound
             return GTS;
         }

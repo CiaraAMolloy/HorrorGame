@@ -16,11 +16,11 @@ public class Soundspawner : MonoBehaviour
     {
         
     }
-    void spawnSound(float volume,Vector3 soundLocal){
+   public void spawnSound(float volume,Vector3 where ){
 //volume==scale
-       GameObject newObject = Instantiate(Sound,soundLocal, transform.rotation) as GameObject;
-       newObject.transform.localScale = new Vector3(volume,volume,volume); // change its local scale in x y z format
-
+       GameObject s = Instantiate(Sound, where, transform.rotation) as GameObject;
+      s.GetComponent<SoundScript>().Volume =volume ;
+    
 
 
     }
