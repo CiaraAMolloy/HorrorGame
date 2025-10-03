@@ -158,18 +158,21 @@ namespace StarterAssets
 				transform.Rotate(Vector3.up * _rotationVelocity);
 			}
 		}
-		private void Yell(){
+		private void Yell()
+		{
 
 			if(Input.GetKeyDown(KeyCode.Y))
-			{	if(!aaa.isPlaying ){aaa.Play();}
+			{	
+				
 					
 			//play yell?
 				Debug.Log("aaaaaaaahhhhhh");
 			
-				spawnsound.spawnSound(100,this.transform.position);//if (!Footsteps.isPlaying && _input.sprint);
+				spawnsound.spawnSound(100,this.transform.position);
 				
 
 			}
+			if(Input.GetKeyDown(KeyCode.Y) && !aaa.isPlaying ){aaa.Play();}
 
 
 		}

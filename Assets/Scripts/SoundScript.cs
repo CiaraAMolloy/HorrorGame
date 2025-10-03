@@ -20,7 +20,7 @@ public class SoundScript : MonoBehaviour
 
     //vol*sus/distance
    
-    desire= 10.0f*((Volume*l.getSus())/distance);//need to experiment
+    desire= 10.0f*((Volume*l.getSus()*2)/distance);//need to experiment
        if (desire>5.0f){
         Debug.Log("hears a sound");
       } 

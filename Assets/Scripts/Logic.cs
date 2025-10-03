@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Logic : MonoBehaviour
 {
    public bool HeardASound;
-   public float sus;
+   public float sus=1;
 
     // Start is called before the first frame update
     void Start()
