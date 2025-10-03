@@ -34,7 +34,10 @@ public class Logic : MonoBehaviour
     }
     public bool GetHeardsound()
     {return HeardASound;}
-    //public void checkHeardsound();
+    public void setHeardsound(bool tf)
+    {
+        HeardASound = tf;
+     }
 
     public float getSus(){
         return sus;
