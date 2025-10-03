@@ -168,7 +168,7 @@ namespace StarterAssets
 			//play yell?
 				Debug.Log("aaaaaaaahhhhhh");
 			
-				spawnsound.spawnSound(100,this.transform.position);
+				spawnsound.spawnSound(10,this.transform.position);
 				
 
 			}

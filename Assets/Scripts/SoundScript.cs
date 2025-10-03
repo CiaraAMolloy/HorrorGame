@@ -19,12 +19,16 @@ public class SoundScript : MonoBehaviour
      distance= Vector3.Distance(Fishman.transform.position, this.transform.position);
 
     //vol*sus/distance
+ float sus = l.getSus();
+    desire= ((Volume+sus)/distance);
+    //need to experiment  *l.getSus()
    
-    desire= 10.0f*((Volume*l.getSus()*2)/distance);//need to experiment
-       if (desire>5.0f){
-        Debug.Log("hears a sound");
-      } 
-      else{ Debug.Log(Volume+" ,"+distance);}
+    Debug.Log(Volume+"/"+distance+"="+"desire"+desire);
+       if (desire > 5.0f)
+    {
+      Debug.Log("hears a sound");
+    }
+    else { Debug.Log(Volume + " ," + distance); }
     }
 
     // Update is called once per frame
