@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class Logic : MonoBehaviour
 {
    public bool HeardASound;
-   public float sus=1;
+    List<GameObject> unheardsounds;
+   public float sus = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Logic : MonoBehaviour
     {
         Debug.Log("Game Over");
     }
+
 
     public void RestartGame()
     {     Debug.Log("button press");

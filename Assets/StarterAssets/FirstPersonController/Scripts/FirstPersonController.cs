@@ -165,11 +165,11 @@ namespace StarterAssets
 			{	
 				
 					
-			//play yell?
-				Debug.Log("aaaaaaaahhhhhh");
+				//play yell?
+				//Debug.Log("aaaaaaaahhhhhh");
 			
 				spawnsound.spawnSound(10,this.transform.position);
-				
+				//Destroy(s);
 
 			}
 			if(Input.GetKeyDown(KeyCode.Y) && !aaa.isPlaying ){aaa.Play();}
