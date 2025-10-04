@@ -30,12 +30,12 @@ public class SoundScript : MonoBehaviour
     //Debug.Log(Volume+"/"+distance+"="+"desire"+desire);
     if (desire > threshold)
     {
-      Debug.Log("hears a sound");
+      //Debug.Log("hears a sound");
       l.setHeardsound(true);
     }
     else
     {
-      Debug.Log("does not hears a sound");
+      //Debug.Log("does not hears a sound");
 
       //Destroy(this);
     }
