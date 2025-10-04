@@ -161,9 +161,9 @@ namespace StarterAssets
 		private void Yell()
 		{
 
-			if(Input.GetKeyDown(KeyCode.Y))
+			if(Input.GetKeyDown(KeyCode.Y)&&!aaa.isPlaying)
 			{	
-				
+				aaa.Play();
 					
 				//play yell?
 				//Debug.Log("aaaaaaaahhhhhh");
@@ -172,8 +172,7 @@ namespace StarterAssets
 				//Destroy(s);
 
 			}
-			if(Input.GetKeyDown(KeyCode.Y) && !aaa.isPlaying ){aaa.Play();}
-
+			
 
 		}
 
@@ -226,6 +225,7 @@ namespace StarterAssets
 					Footsteps.volume = 1.0f;
 					Footsteps.pitch = 1.5f;
 					Footsteps.Play();
+					spawnsound.spawnSound(8, this.transform.position);
 					//Debug.Log("sprint");
 				}
 				else if (!Footsteps.isPlaying)
@@ -233,6 +233,7 @@ namespace StarterAssets
 					Footsteps.volume = .45f;
 					Footsteps.pitch = 1.0f;
 					Footsteps.Play();
+					spawnsound.spawnSound(4,this.transform.position);
 				}
 				//Footsteps.PlayDelayed(delay);
 
