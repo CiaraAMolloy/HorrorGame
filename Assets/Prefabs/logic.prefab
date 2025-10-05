@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sound: {fileID: 7539136305483631383, guid: dc803004d0762f94090034095f7a3c6e, type: 3}
+  l: {fileID: 0}
 --- !u!114 &6426359600424460901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,3 +59,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee782ebe7d32484499b2570c61e990d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeardASound: 0
+  sus: 1
