@@ -8,6 +8,8 @@ TagManager:
   - fishman
   - Sound
   - logic
+  - Goal
+  - FishNav
   layers:
   - Default
   - TransparentFX
