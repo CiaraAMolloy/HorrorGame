@@ -15,7 +15,7 @@ public class BloodSeek : State
 
     //run
     public override State RunCurrentState()
-    {
+    {/*
         if (false)
         {//if "sees" player
             return GGY;
@@ -28,7 +28,7 @@ public class BloodSeek : State
         { //After player gets away/time gone
             return patrol;
 
-        }
+        }*/
 
 
 

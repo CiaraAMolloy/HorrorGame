@@ -31,7 +31,7 @@ public class SoundScript : MonoBehaviour
     if (desire > threshold)
     {
       //Debug.Log("hears a sound");
-      l.setHeardsound(true);
+      l.setHeardsound(true,this.transform.position);
     }
     else
     {

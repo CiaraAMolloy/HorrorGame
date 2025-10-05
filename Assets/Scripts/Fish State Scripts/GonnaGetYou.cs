@@ -6,13 +6,13 @@ public class GonnaGetYou : State
 {
     public RandomPatrol patrol;
     public override State RunCurrentState()
-    {
+    {/*
        
         if (false)
         { //After player gets away/time gone
             return patrol;
             
-        }
+        }*/
       
 
 

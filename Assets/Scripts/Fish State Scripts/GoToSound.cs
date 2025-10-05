@@ -9,20 +9,35 @@ public class GoToSound : State
    
     public GonnaGetYou GGY;
     public RandomPatrol Patrol;
+    public Logic l;
+    private UnityEngine.AI.NavMeshAgent agent;
+    Vector3 thispos;
 
     //run
     public override State RunCurrentState()
-    {
+    {       agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        thispos=GameObject.FindGameObjectWithTag("fishman").transform.position;
+        /*
         if (false)
         {
             //if "sees" player
             return GGY;
-        }
-        if (false)
+        }*/
+       
+        Vector3 goal=l.GetmostRecentsound();
+//Debug.Log(goal);
+Debug.Log(Vector3.Distance(goal, thispos));
+// operator ==(Vector3 lhs, Vector3 rhs)
+
+        if ( Vector3.Distance(goal, thispos)<2)
         { //After find sound patrol
+       // Debug.Log("yay");
             return Patrol;
             
         }
+        agent.SetDestination(goal);
+
       
 
 

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Logic : MonoBehaviour
 {
    public bool HeardASound;
+   public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
    public float sus = 1;
 
@@ -32,11 +33,22 @@ public class Logic : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    
     }
+
     public bool GetHeardsound()
     {return HeardASound;}
-    public void setHeardsound(bool tf)
+    public Vector3 GetmostRecentsound()
+    {return mostRecentsound;}
+
+    public void setHeardsound(bool tf,Vector3 posOfHS)
     {
         HeardASound = tf;
+        mostRecentsound=posOfHS;
+
+     }
+      public void setHeardsoundFalse()
+    {
+        HeardASound = false;
+        
      }
 
     public float getSus(){

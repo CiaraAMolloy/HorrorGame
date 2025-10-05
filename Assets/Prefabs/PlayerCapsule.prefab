@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6201994232651423267}
   - component: {fileID: 2024789054499549723}
   - component: {fileID: 794039189288828330}
+  - component: {fileID: 1449976546629318878}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -263,6 +264,24 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1449976546629318878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169622168415101917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1374874daaba51148bedba888442e467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloodPrefab: {fileID: 6931368025587852288, guid: 6f44859e7926f6341adef66ec8d88896, type: 3}
+  dripInterval: 5
+  offsetAboveGround: 0.01
+  bloodTimer: 10
+  startTint: {r: 0.94716984, g: 0.05540045, b: 0.05540045, a: 1}
+  endTint: {r: 0.3132075, g: 0.0798372, b: 0, a: 1}
 --- !u!1 &7790418323286322461
 GameObject:
   m_ObjectHideFlags: 0

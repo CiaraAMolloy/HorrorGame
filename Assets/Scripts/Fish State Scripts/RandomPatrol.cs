@@ -24,22 +24,28 @@ public class RandomPatrol : State
         
        agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
        
-       goal= GameObject.FindGameObjectWithTag("Player").transform.position;
+       //goal= GameObject.FindGameObjectWithTag("Player").transform.position;
+       goal =new Vector3(Random.Range(1.0f,100.0f),Random.Range(1.0f,100.0f),1.0f);
+       
       // Debug.Log(goal);
-        /*
-        if (false)
+        
+     /*   if (false)
         {//if "sees" player
             return GGY ;
-        }
+        }*/
+
         if (L.GetHeardsound())
         {//if hear sound
+        L.setHeardsoundFalse();
+        
             return GTS;
         }
+        /*
         if (false)
         { //if find blood
             return BS;
         }*/
-        goal= GameObject.FindGameObjectWithTag("Player").transform.position;
+       // goal= GameObject.FindGameObjectWithTag("Player").transform.position;
 
 
         agent.SetDestination(goal);
