@@ -27,7 +27,7 @@ public class GoToSound : State
        
         Vector3 goal=l.GetmostRecentsound();
 //Debug.Log(goal);
-Debug.Log(Vector3.Distance(goal, thispos));
+//Debug.Log(Vector3.Distance(goal, thispos));
 // operator ==(Vector3 lhs, Vector3 rhs)
 
         if ( Vector3.Distance(goal, thispos)<2)
