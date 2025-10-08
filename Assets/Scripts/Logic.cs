@@ -9,6 +9,8 @@ public class Logic : MonoBehaviour
    public bool HeardASound;
    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
+    string[] PartsCollected = new string[5];
+    int numberofpartscollected = 0;
    public float sus = 1;
 
     // Start is called before the first frame update
@@ -20,6 +22,13 @@ public class Logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+    public void partcollected(string name)
+    {
+        Debug.Log("collected" + name);
+        PartsCollected[numberofpartscollected]=name;
+        numberofpartscollected++;
 
     }
     public void trigGameOver()

@@ -10,6 +10,7 @@ TagManager:
   - logic
   - Goal
   - FishNav
+  - Radio parts
   layers:
   - Default
   - TransparentFX
