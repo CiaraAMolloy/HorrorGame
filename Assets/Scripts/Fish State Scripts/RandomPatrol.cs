@@ -13,20 +13,22 @@ public class RandomPatrol : State
     public GonnaGetYou GGY;
 
     public Logic L;
-    Vector3 goal ;
+   //Vector3 goal  ;
 
     private UnityEngine.AI.NavMeshAgent agent;
-    //private Vector3 goal=new Vector3(Random.Range(0,50),Random.Range(0,50),1);
+    public Vector3 goal=new Vector3(-46.0f,4.08f,8.18f);
    
     //run
     public override State RunCurrentState()
     {
-        
-       agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
-       
-       //goal= GameObject.FindGameObjectWithTag("Player").transform.position;
-    //goal =new Vector3(Random.Range(-100.0f,100.0f),4.08f,Random.Range(-100.0f,100.0f));
-       
+
+        agent = GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        //goal= GameObject.FindGameObjectWithTag("Player").transform.position;
+        Debug.Log( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position));
+        if ( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position)<3) {
+            goal = new Vector3(Random.Range(-100.0f, 100.0f), 4.08f, Random.Range(-100.0f, 100.0f));
+        }
       // Debug.Log(goal);
         
      /*   if (false)
@@ -48,7 +50,7 @@ public class RandomPatrol : State
        // goal= GameObject.FindGameObjectWithTag("Player").transform.position;
 
 
-        //agent.SetDestination(goal);
+        agent.SetDestination(goal);
 
 
         return this;
