@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 836810206}
   - component: {fileID: 836810205}
   - component: {fileID: 836810204}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1647,7 @@ PrefabInstance:
       objectReference: {fileID: 1350818514}
     - target: {fileID: 1294130388247071665, guid: 143931edc377a664eb1bbe161def6275, type: 3}
       propertyPath: GroundLayers.m_Bits
-      value: 128
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2024789054499549723, guid: 143931edc377a664eb1bbe161def6275, type: 3}
       propertyPath: jump
