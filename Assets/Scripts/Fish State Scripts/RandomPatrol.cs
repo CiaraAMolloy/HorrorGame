@@ -25,9 +25,10 @@ public class RandomPatrol : State
         agent = GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         //goal= GameObject.FindGameObjectWithTag("Player").transform.position;
-        Debug.Log( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position));
+      //  Debug.Log( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position));
         if ( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position)<3) {
             goal = new Vector3(Random.Range(-100.0f, 100.0f), 4.08f, Random.Range(-100.0f, 100.0f));
+            
         }
       // Debug.Log(goal);
         
