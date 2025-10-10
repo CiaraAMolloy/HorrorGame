@@ -34,6 +34,12 @@ public class Logic : MonoBehaviour
     public void trigGameOver()
     {
         Debug.Log("Game Over");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+    }
+       public void retry()
+    {
+        
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 
 
