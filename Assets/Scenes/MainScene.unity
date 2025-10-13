@@ -4425,6 +4425,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 4738571598781146406, guid: 535205951760e9a4d8c424bf113dd341, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6703825966457118399, guid: 535205951760e9a4d8c424bf113dd341, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.1
