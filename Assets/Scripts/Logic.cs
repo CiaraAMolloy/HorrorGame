@@ -9,9 +9,31 @@ public class Logic : MonoBehaviour
    public bool HeardASound;
    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
+
     string[] PartsCollected = new string[5];
     int numberofpartscollected = 0;
    public float sus = 1;
+
+   bool chasing=false;
+   bool isHit=false;
+    public AudioSource clang;
+
+
+
+public void hit(){
+if(chasing){
+    isHit=true;
+    clang.Play();
+}}
+public void hitadressed(){
+    isHit=false;
+}
+
+public bool getisHit(){
+    return isHit;
+}
+     
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +56,7 @@ public class Logic : MonoBehaviour
     public void trigGameOver()
     {
         Debug.Log("Game Over");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+       // UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
        public void retry()
     {
@@ -44,7 +66,7 @@ public class Logic : MonoBehaviour
 
 
     public void RestartGame()
-    {     Debug.Log("button press");
+    {   Debug.Log("button press");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    
     }
@@ -71,5 +93,14 @@ public class Logic : MonoBehaviour
     }
     public void AddSus(float time){
         sus+=time;
+    }
+
+
+    public void setChasing(bool tf){
+        chasing=tf;
+    }
+
+    public bool getChasing(){
+        return chasing;
     }
 }

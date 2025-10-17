@@ -18,12 +18,12 @@ public class GoToSound : State
     {       agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         thispos=GameObject.FindGameObjectWithTag("fishman").transform.position;
-        /*
-        if (false)
+        
+        if (l.getChasing())
         {
             //if "sees" player
             return GGY;
-        }*/
+        }
        
         Vector3 goal=l.GetmostRecentsound();
 //Debug.Log(goal);
