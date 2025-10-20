@@ -26,16 +26,14 @@ public class RandomPatrol : State
 
         //goal= GameObject.FindGameObjectWithTag("Player").transform.position;
       //  Debug.Log( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position));
-        if ( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position)<3) {
-            goal = new Vector3(Random.Range(-100.0f, 100.0f), 4.08f, Random.Range(-100.0f, 100.0f));
-            
-        }
+        
       // Debug.Log(goal);
         
-     /*   if (false)
+       if (L.getChasing())
         {//if "sees" player
+        L.setHeardsoundFalse();
             return GGY ;
-        }*/
+        }
 
         if (L.GetHeardsound())
         {//if hear sound
@@ -49,7 +47,10 @@ public class RandomPatrol : State
             return BS;
         }*/
        // goal= GameObject.FindGameObjectWithTag("Player").transform.position;
-
+if ( Vector3.Distance(goal,GameObject.FindGameObjectWithTag("fishman").transform.position)<3) {
+            goal = new Vector3(Random.Range(-100.0f, 100.0f), 4.08f, Random.Range(-100.0f, 100.0f));
+            
+        }
 
         agent.SetDestination(goal);
 
