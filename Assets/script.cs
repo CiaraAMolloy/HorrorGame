@@ -10,11 +10,16 @@ void Start()
     }
     
     public void OnTriggerEnter(Collider c){
-         Debug.Log("I can smell you");
-        l.setChasing(true);
+
+        if (c.gameObject.name == "PlayerCapsule") {
+            Debug.Log("I can smell you");
+            l.setChasing(true);
+        }
     }
     public void OnTriggerExit(Collider c){
-        Debug.Log("where go?");
-        l.setChasing(false);
+        if (c.gameObject.name == "PlayerCapsule") {
+            Debug.Log("where go?");
+            l.setChasing(false); 
+            }
     }
 }
