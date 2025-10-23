@@ -17,7 +17,7 @@ public class GonnaGetYou : State
        // l.setChasing(true);
 
        
-        if (!(l.getChasing()))
+        if (!l.getChasing())
         { //After player gets away/time gone
 //l.setChasing(false);
             return patrol;
