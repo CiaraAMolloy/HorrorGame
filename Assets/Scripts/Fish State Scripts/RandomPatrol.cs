@@ -38,22 +38,22 @@ public class RandomPatrol : State
 
         if (L.GetHeardsound())
         {//if hear sound
-        L.setHeardsoundFalse();
-        
+            L.setHeardsoundFalse();
+
             return GTS;
         }
-        /*
-        if (false)
-        { //if find blood
+        
+        if (L.GetBloodDetected())
+        {
             return BS;
-        }*/
+        }
        // goal= GameObject.FindGameObjectWithTag("Player").transform.position;
-if (agent.remainingDistance==0) {
+        if (agent.remainingDistance==0) {
             goal = new Vector3(Random.Range(-28.0f, 23.0f), 4.08f, Random.Range(-30.0f, 30.0f));
             Debug.Log("new goal");
-        }
+            }
 
-        agent.SetDestination(goal);
+            agent.SetDestination(goal);
 
 
         return this;

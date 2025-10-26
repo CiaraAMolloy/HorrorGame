@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Logic : MonoBehaviour
 {
+    public Transform trackedAgent;
    public bool HeardASound;
    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
@@ -17,6 +18,13 @@ public class Logic : MonoBehaviour
    bool chasing=false;
    bool isHit=false;
     public AudioSource clang;
+
+    private bool bloodDetected = false;
+    public float bloodLifetime = 10f;
+    public float initialDetectionRange = 20f;
+    public float minDetectionRange = 2f;
+    public float bloodCheckInterval = 0.5f;
+    private float bloodCheckTimer = 0f;
 
 
 
@@ -44,8 +52,15 @@ public bool getisHit(){
     // Update is called once per frame
     void Update()
     {
-
+        // Check for nearby blood every few frames
+        bloodCheckTimer -= Time.deltaTime;
+        if (bloodCheckTimer <= 0f)
+        {
+            bloodCheckTimer = bloodCheckInterval;
+            bloodDetected = IsBloodNearby();
+        }
     }
+
     public void partcollected(string name)
     {
         Debug.Log("collected" + name);
@@ -100,7 +115,54 @@ public bool getisHit(){
         chasing=tf;
     }
 
-    public bool getChasing(){
+    public bool getChasing()
+    {
         return chasing;
     }
+    
+    bool IsBloodNearby()
+    {
+        if (BloodDrip.activeBlood == null || BloodDrip.activeBlood.Count == 0)
+        {
+            Debug.Log("No active blood objects in list.");
+            return false;
+        }
+
+        foreach (var (blood, spawnTime) in BloodDrip.activeBlood)
+        {
+            if (blood == null) continue;
+
+            float range = BloodDrip.GetCurrentDetectionRange(
+                spawnTime,
+                bloodLifetime,
+                initialDetectionRange,
+                minDetectionRange
+            );
+
+            float distance = Vector3.Distance(trackedAgent.position, blood.transform.position);
+            Debug.Log($"Checking blood at {distance:F2}m (range {range:F2})");
+
+            if (distance < range)
+            {
+                Debug.Log("Blood detected!");
+                return true;
+            }
+        }
+
+        Debug.Log("No blood in range.");
+        return false;
+    }
+
+
+    public bool GetBloodDetected()
+    {
+        return bloodDetected;
+    }
+
+        void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, initialDetectionRange);
+    }
+
 }

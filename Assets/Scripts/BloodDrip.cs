@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BloodDrip : MonoBehaviour
 {
@@ -7,11 +8,15 @@ public class BloodDrip : MonoBehaviour
     public float dripInterval = 5f;
     public float offsetAboveGround = 0.01f;
     public float bloodTimer = 10f;
+    public float initialDetectionRange = 20f;
+    public float minDetectionRange = 2f;
 
     public Color startTint = Color.white;
     public Color endTint = new Color(0.7f, 0.4f, 0.3f);
 
     private float dripTimer;
+
+    public static List<(GameObject blood, float spawnTime)> activeBlood = new List<(GameObject, float)>();
 
     void Update() //driptimer is a timer using dripinterval to drop blood on that set interval and resetting
     {
@@ -35,6 +40,8 @@ public class BloodDrip : MonoBehaviour
             Vector3 spawnPos = hit.point + Vector3.up * offsetAboveGround;
             GameObject blood = Instantiate(BloodPrefab, spawnPos, Quaternion.identity);
 
+            activeBlood.Add((blood, Time.time));
+
             StartCoroutine(ColourChange(blood));
 
             // StartCoroutine(DebugDetectionSphere(spawnPos, 10f, 0.5f, bloodTimer, Color.green)); //This was a debug test for the radius of detection on the blood that i removed
@@ -57,7 +64,15 @@ public class BloodDrip : MonoBehaviour
             yield return null;
         }
 
+        activeBlood.RemoveAll(b => b.blood == blood);
         Destroy(blood);
+    }
+
+    public static float GetCurrentDetectionRange(float spawnTime, float lifetime, float initial, float min)
+    {
+        float age = Time.time - spawnTime;
+        float t = Mathf.Clamp01(age / lifetime);
+        return Mathf.Lerp(initial, min, t);
     }
 
 
