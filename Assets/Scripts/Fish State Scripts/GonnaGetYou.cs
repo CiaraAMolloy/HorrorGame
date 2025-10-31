@@ -12,16 +12,19 @@ public class GonnaGetYou : State
 
     public override State RunCurrentState()
     {
-         agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
-        goal= GameObject.FindGameObjectWithTag("Player").transform.position;
-       // l.setChasing(true);
+        agent = GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
+         if(l.getChasing())
+        goal = GameObject.FindGameObjectWithTag("Player").transform.position;
+        // l.setChasing(true);
 
+        agent.SetDestination(goal);
        
-        if (!l.getChasing())
+        if (!l.getChasing()&&agent.remainingDistance==0)
         { //After player gets away/time gone
-//l.setChasing(false);
-            return patrol;
-            
+          //l.setChasing(false);
+           // if (agent.remainingDistance==0) {
+                return patrol;
+           // }
         }
         else if(l.getisHit()){
         //    l.setChasing(false);

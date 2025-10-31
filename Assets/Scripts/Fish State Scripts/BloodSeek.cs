@@ -88,11 +88,21 @@ using UnityEngine.AI;
         return patrol;
     }
 
-    if (Vector3.Distance(transform.position, target.transform.position) < 1.5f)
-    {
-        Debug.Log("Blood found, going to patrol");
-        return patrol;
-    }
+        if (Vector3.Distance(transform.position, target.transform.position) < 1.5f)
+        {
+            Debug.Log("Blood found, going to patrol");
+            return patrol;
+        }
+    
+    /*
+        if (L.GetHeardsound())
+        {//if hear sound
+        //Debug.Log("Going to sound");
+            L.setHeardsoundFalse();
+
+            return GTS;
+        }
+        */
 
     return this;
 }

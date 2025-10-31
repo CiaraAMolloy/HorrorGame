@@ -67,6 +67,11 @@ public bool getisHit(){
         PartsCollected[numberofpartscollected]=name;
         numberofpartscollected++;
 
+        if (numberofpartscollected==5)
+        {
+            Debug.Log("win game");
+        }
+
     }
     public void trigGameOver()
     {
@@ -124,7 +129,7 @@ public bool getisHit(){
     {
         if (BloodDrip.activeBlood == null || BloodDrip.activeBlood.Count == 0)
         {
-            Debug.Log("No active blood objects in list.");
+            //Debug.Log("No active blood objects in list.");
             return false;
         }
 
@@ -140,16 +145,16 @@ public bool getisHit(){
             );
 
             float distance = Vector3.Distance(trackedAgent.position, blood.transform.position);
-            Debug.Log($"Checking blood at {distance:F2}m (range {range:F2})");
+            //Debug.Log($"Checking blood at {distance:F2}m (range {range:F2})");
 
             if (distance < range)
             {
-                Debug.Log("Blood detected!");
+                //Debug.Log("Blood detected!");
                 return true;
             }
         }
 
-        Debug.Log("No blood in range.");
+        //Debug.Log("No blood in range.");
         return false;
     }
 

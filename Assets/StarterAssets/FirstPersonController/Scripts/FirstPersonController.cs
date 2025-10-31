@@ -168,7 +168,7 @@ namespace StarterAssets
 				//play yell?
 				//Debug.Log("aaaaaaaahhhhhh");
 			
-				spawnsound.spawnSound(10,this.transform.position);
+				spawnsound.spawnSound(100,this.transform.position);
 				//Destroy(s);
 
 			}
@@ -234,6 +234,7 @@ namespace StarterAssets
 					Footsteps.pitch = 1.0f;
 					Footsteps.Play();
 					spawnsound.spawnSound(4,this.transform.position);
+					//this is where the create move sounds is
 				}
 				//Footsteps.PlayDelayed(delay);
 
