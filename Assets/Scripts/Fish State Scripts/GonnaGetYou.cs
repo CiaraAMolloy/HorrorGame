@@ -19,7 +19,7 @@ public class GonnaGetYou : State
 
         agent.SetDestination(goal);
        
-        if (!l.getChasing()&&agent.remainingDistance==0)
+        if (!l.getChasing())
         { //After player gets away/time gone
           //l.setChasing(false);
            // if (agent.remainingDistance==0) {
