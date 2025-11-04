@@ -94,7 +94,7 @@ using UnityEngine.AI;
             return patrol;
         }
     
-    /*
+    
         if (L.GetHeardsound())
         {//if hear sound
         //Debug.Log("Going to sound");
@@ -102,7 +102,7 @@ using UnityEngine.AI;
 
             return GTS;
         }
-        */
+        
 
     return this;
 }
