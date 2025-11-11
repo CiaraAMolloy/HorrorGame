@@ -11,7 +11,7 @@ public class Logic : MonoBehaviour
    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
 
-    string[] PartsCollected = new string[5];
+    string[] PartsCollected = new string[6];
     int numberofpartscollected = 0;
    public float sus = 1;
 
