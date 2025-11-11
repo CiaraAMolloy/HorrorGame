@@ -70,14 +70,13 @@ public bool getisHit(){
         if (numberofpartscollected==5)
         {
             Debug.Log("win game");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("You won", LoadSceneMode.Single);
         }
 
     }
     public void trigGameOver()
     {
         Debug.Log("Game Over");
-       UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+       // UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
        public void retry()
     {

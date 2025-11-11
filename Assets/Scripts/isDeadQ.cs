@@ -14,7 +14,7 @@ public class isDeadQ : MonoBehaviour
     {
         Debug.Log("Entered collision with " + collision.gameObject.name);
 
-        if (collision.gameObject.name == "Fishmancollider")
+        if (collision.gameObject.name == "glaucus")
         {
             Debug.Log("AAAAAAh dead");
             l.trigGameOver();
