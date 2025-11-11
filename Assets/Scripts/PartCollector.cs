@@ -19,9 +19,9 @@ public class PartCollector : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + "collected a part");
+        
         if (other.gameObject.name == "PlayerCapsule")
-        {
+        {Debug.Log(other.gameObject.name + "collected a part");
             l.partcollected(gameObject.name);
             Destroy(this.gameObject);
         }
