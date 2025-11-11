@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SRayPatrol : SRayState
 {
+    //the states it'll swap to
+    public SRayGetYou SRGY;
+    public SRayStingYou SRSY;
 
-    // to be fair, this isnt really too necessary for just exclusively the rays
-    // but it helps it so that if the rays are stuck in a something,
-    // they just retreat to this then they're capable of switching yet again.
+    // this is going to be the initial state the ray stays in.
+    public Transform[] points;
+    private int destPoint = 0;
+    private NavMeshAgent agent;
 
     public override SRayState Run()
     {
@@ -22,6 +27,25 @@ public class SRayPatrol : SRayState
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
 
+        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
+
+        //Unity doc states disabling auto braking allows for continuous
+        //movement btwn points (agent doesnt slow down when reaching point)
+
+        GotoNextPoint();
+
         return this;
+    }
+
+    void GotoNextPoint()
+    {
+        if (points.Length == 0)
+        {
+            return;
+        }
+        
+        agent.destination = points[destPoint].position;
+
+        destPoint = (destPoint + 1) % points.Length;
     }
 }
