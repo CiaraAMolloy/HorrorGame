@@ -76,7 +76,7 @@ public bool getisHit(){
     public void trigGameOver()
     {
         Debug.Log("Game Over");
-       // UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
        public void retry()
     {
