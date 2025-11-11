@@ -11,6 +11,7 @@ TagManager:
   - Goal
   - FishNav
   - Radio parts
+  - stingray
   layers:
   - Default
   - TransparentFX
