@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class SRayGetYou : SRayState
 {
+    public GameObject SRay;
+    public GameObject player;
+
     // to be fair, this isnt really too necessary for just exclusively the rays
     // but it helps it so that if the rays are stuck in a something,
     // they just retreat to this then they're capable of switching yet again.
+
+    public void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public override SRayState Run()
     {

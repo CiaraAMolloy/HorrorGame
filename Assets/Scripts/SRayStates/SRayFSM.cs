@@ -56,7 +56,7 @@ public class SRayFSM : MonoBehaviour
             {
                 case SRayBirth:
                     return "the eggs are hatching";
-                case SRayIdle:
+                case SRayPatrol:
                     return "Swimmin";
                 case SRayGetYou:
                     return "watch out man hes gonna getcha";

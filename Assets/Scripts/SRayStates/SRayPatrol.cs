@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SRayIdle : SRayState
+public class SRayPatrol : SRayState
 {
     // to be fair, this isnt really too necessary for just exclusively the rays
     // but it helps it so that if the rays are stuck in a something,
