@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SRayStingYou : SRayState
 {
-    // to be fair, this isnt really too necessary for just exclusively the rays
-    // but it helps it so that if the rays are stuck in a something,
-    // they just retreat to this then they're capable of switching yet again.
+    //to see whether it should return to whichever state below
+    public SRayPatrol SRPtrl;
+    public SRayGetYou SRGY;
+
+    private bool stung = false; //to see if the player has been stung
 
     public override SRayState Run()
     {
@@ -20,6 +22,13 @@ public class SRayStingYou : SRayState
         this.isRayContact = isRayContact;
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
+
+        if (stung == false)
+        {
+            Debug.Log("player's been stung! yeowch!");
+            //player takes 5 damage
+            stung = true;
+        }
 
         return this;
     }
