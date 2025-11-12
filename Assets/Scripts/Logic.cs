@@ -67,7 +67,7 @@ public bool getisHit(){
         PartsCollected[numberofpartscollected]=name;
         numberofpartscollected++;
 
-        if (numberofpartscollected==5)
+        if (numberofpartscollected==6)
         {
             Debug.Log("win game");
         }
