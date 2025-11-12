@@ -41,18 +41,17 @@ public class GoToSound : State
         switch (path.status)
         {
             case UnityEngine.AI.NavMeshPathStatus.PathComplete:
-                //Debug.Log("will be able to reach .");
-                //agent.SetDestination(l.GetmostRecentsound());
+                
                 agent.SetPath(path);
-                 goal = l.GetmostRecentsound();
+                goal = l.GetmostRecentsound();
                 break;
             case UnityEngine.AI.NavMeshPathStatus.PathPartial:
                // Debug.Log("partial path.");
-                agent.SetDestination(path.corners[path.corners.Length - 1]);
-                goal = path.corners[path.corners.Length - 1];
+                // return Patrol;      
+                  
                 break;
             default:
-                return Patrol;
+                //return Patrol;
                 break;
               
                 

@@ -16,6 +16,7 @@ namespace StarterAssets
 		public float delay;
 		public Soundspawner spawnsound;
 		public AudioSource Footsteps;
+		public Logic l;
 		public AudioSource aaa;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -169,12 +170,13 @@ namespace StarterAssets
 			if(Input.GetKeyDown(KeyCode.Y)&&!aaa.isPlaying)
 			{	
 				aaa.Play();
-					
+
 				//play yell?
 				//Debug.Log("aaaaaaaahhhhhh");
-			
-				spawnsound.spawnSound(100,this.transform.position);
+
+				spawnsound.spawnSound(100, this.transform.position);
 				//Destroy(s);
+				l.hit(); 
 
 			}
 			

@@ -10,6 +10,7 @@ public class Stunned : State
     //run
     public override State RunCurrentState()
     {
+        Debug.Log("stun!!!!!");
         //this will go a certain length then back to patrol
         if (Counter < StunTime)
         {

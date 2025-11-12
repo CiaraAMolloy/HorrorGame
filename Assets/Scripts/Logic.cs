@@ -29,10 +29,12 @@ public class Logic : MonoBehaviour
 
 
 public void hit(){
-if(chasing){
-    isHit=true;
-    clang.Play();
-}}
+        if (chasing)
+        {
+            isHit = true;
+           
+        }
+}
 public void hitadressed(){
     isHit=false;
 }

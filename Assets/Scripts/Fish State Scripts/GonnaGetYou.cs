@@ -23,15 +23,13 @@ public class GonnaGetYou : State
         
 
     if (!l.getChasing())
-    { //After player gets away/time gone
-      //l.setChasing(false);
-      // if (agent.remainingDistance==0) {
-      return patrol;
-      // }
-    }
-    else if (l.getisHit())
     {
-      //    l.setChasing(false);
+      return patrol;
+      
+    }
+     if (l.getisHit())
+    {
+      
       l.hitadressed();
       return s;
 
@@ -45,13 +43,12 @@ public class GonnaGetYou : State
                 agent.SetPath(path);
                 break;
             case UnityEngine.AI.NavMeshPathStatus.PathPartial:
-               
-                agent.SetDestination(path.corners[path.corners.Length - 1]);
-                goal = path.corners[path.corners.Length - 1];
-                
+             agent.SetPath(path);
+            
                 break;
             default:
-                return patrol;
+              
+             
                 break;
               
                 

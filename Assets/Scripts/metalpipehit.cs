@@ -17,7 +17,7 @@ public class metalpipehit : MonoBehaviour
     {
        
     }*/
-
+/*
     void OnTriggerStay(Collider c){
        // Debug.Log("in range ");
         if (Input.GetKeyDown("u"))
@@ -26,5 +26,5 @@ public class metalpipehit : MonoBehaviour
         l.hit(); 
        // clang.Play();
         }
-    }
+    }*/
 }
