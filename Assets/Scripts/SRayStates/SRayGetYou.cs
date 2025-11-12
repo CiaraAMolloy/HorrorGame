@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SRayGetYou : SRayState
 {
+    //different states itll transfer to
+    public SRayPatrol patrol;
+    public SRayStingYou sting;
+
     public GameObject SRay;
     public GameObject player;
+    private NavMeshAgent agent;
+    Vector3 goal;
 
     // to be fair, this isnt really too necessary for just exclusively the rays
     // but it helps it so that if the rays are stuck in a something,
@@ -14,6 +21,7 @@ public class SRayGetYou : SRayState
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
     }
 
     public override SRayState Run()
@@ -29,6 +37,20 @@ public class SRayGetYou : SRayState
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
 
-        return this;
+        //if ray is in contact with player, STING!
+        //GET HIS ASS
+
+        if (isPlayerContact) 
+        {
+            Debug.Log("SEIZE HIM!");
+            return sting;
+        }
+
+        goal = GameObject.FindGameObjectWithTag("player").transform.position;
+        //locates player, sets as destination
+
+        transform.parent.parent.LookAt(player.transform.position);
+
+            return this;
     }
 }
