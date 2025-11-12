@@ -14,10 +14,6 @@ public class SRayGetYou : SRayState
     private NavMeshAgent agent;
     Vector3 goal;
 
-    // to be fair, this isnt really too necessary for just exclusively the rays
-    // but it helps it so that if the rays are stuck in a something,
-    // they just retreat to this then they're capable of switching yet again.
-
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -45,6 +41,11 @@ public class SRayGetYou : SRayState
             Debug.Log("SEIZE HIM!");
             return sting;
         }
+
+        //if player gets away from stingray's range
+        //stingray returns
+
+        //if dist from patrol section > range, return patrol
 
         goal = GameObject.FindGameObjectWithTag("player").transform.position;
         //locates player, sets as destination

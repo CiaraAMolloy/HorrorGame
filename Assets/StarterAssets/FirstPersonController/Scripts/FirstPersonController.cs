@@ -25,8 +25,11 @@ namespace StarterAssets
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
+        public int maxHealth = 10;
+        public int currentHealth;
 
-		[Space(10)]
+
+        [Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
@@ -113,7 +116,9 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
-		}
+
+            currentHealth = maxHealth;
+        }
 
 		private void Update()
 		{
@@ -293,7 +298,14 @@ namespace StarterAssets
 			}
 		}
 
-		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+        void changeHealth(int amount)
+        {
+            //makes so that currentHealth cant go over maxHealth.
+            currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+            Debug.Log(currentHealth + " HP / " + maxHealth + "HP");
+        }
+
+        private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
 			if (lfAngle < -360f) lfAngle += 360f;
 			if (lfAngle > 360f) lfAngle -= 360f;
