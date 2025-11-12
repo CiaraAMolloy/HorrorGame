@@ -7,6 +7,7 @@ public class SRayStingYou : SRayState
     //to see whether it should return to whichever state below
     public SRayPatrol SRPtrl;
     public SRayGetYou SRGY;
+    public SRayDeath SRD;
 
     private bool stung = false; //to see if the player has been stung
 
@@ -28,6 +29,12 @@ public class SRayStingYou : SRayState
             Debug.Log("player's been stung! yeowch!");
             //player takes 5 damage
             stung = true;
+
+            //if stung = true, death state.
+            if (stung == true)
+            {
+                return SRD;
+            }
         }
 
         return this;
