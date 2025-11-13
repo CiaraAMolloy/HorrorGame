@@ -26,7 +26,7 @@ public class SRayDeath : SRayState
 
         //Focus on Despawning first
         Debug.Log("STINGRAY DOWN");
-        DespawnSRay();
+        DespawnSRay(); // look into breakpoint / use jetbrains rider to debug
         return this;
     }
 
