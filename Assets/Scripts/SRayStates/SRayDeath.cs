@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SRayDeath : SRayState
 {
+    public SRayStingYou SRSY;
+    public GameObject stingray;
+
     // to be fair, this isnt really too necessary for just exclusively the rays
     // but it helps it so that if the rays are stuck in a something,
     // they just retreat to this then they're capable of switching yet again.
@@ -29,6 +32,6 @@ public class SRayDeath : SRayState
 
     public void DespawnSRay()
     {
-        Destroy(transform.parent.parent.gameObject);
+        Destroy(stingray);
     }
 }
