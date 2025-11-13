@@ -13,6 +13,7 @@ public class isDeadQ : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)//exit or stay
     {
+        Debug.Log(collision.gameObject.name);
         
 
         if (collision.gameObject.name == "Fishmancollider")
