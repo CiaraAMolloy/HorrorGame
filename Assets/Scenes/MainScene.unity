@@ -811,7 +811,7 @@ GameObject:
   m_Name: TowerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &225436072
@@ -12136,6 +12136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1294130388247071665, guid: 143931edc377a664eb1bbe161def6275, type: 3}
+      propertyPath: l
+      value: 
+      objectReference: {fileID: 1350818515}
     - target: {fileID: 1294130388247071665, guid: 143931edc377a664eb1bbe161def6275, type: 3}
       propertyPath: aaa
       value: 
