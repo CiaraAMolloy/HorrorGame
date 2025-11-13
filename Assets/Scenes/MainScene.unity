@@ -8617,11 +8617,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1474358422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1655706070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7169622168415101917, guid: 143931edc377a664eb1bbe161def6275, type: 3}
-  m_PrefabInstance: {fileID: 30598433521270864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1660814699
 GameObject:
   m_ObjectHideFlags: 0
@@ -10096,7 +10091,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 0.75251, y: 0.75251, z: 0.6267355}
+  m_LocalScale: {x: 0.75251, y: 0.98577106, z: 0.6267355}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2660233463055785727}
@@ -12454,7 +12449,7 @@ MonoBehaviour:
   newPlayerContact: 0
   newRayContact: 0
   newPlayerSeen: 0
-  player: {fileID: 1655706070}
+  player: {fileID: 0}
 --- !u!195 &2660233463055785726
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12474,7 +12469,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 1.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &2660233463055785727 stripped
