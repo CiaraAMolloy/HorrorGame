@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 10;
     public int currentHealth;
+    public Logic l;
 
     // Start is called before the first frame update
     void Start()
@@ -13,10 +14,20 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    void changeHealth(int amount)
+    public int getcurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public void changeHealth(int amount)
     {
         //makes so that currentHealth cant go over maxHealth.
         currentHealth = Mathf.Clamp(currentHealth + amount, 0 , maxHealth); 
         Debug.Log(currentHealth + " HP / " + maxHealth + "HP");
+
+        if (currentHealth == 0) //dead.
+        {
+            l.trigGameOver();
+        }
     }
 }
