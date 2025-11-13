@@ -72,6 +72,8 @@ public bool getisHit(){
         if (numberofpartscollected==6)
         {
             Debug.Log("win game");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("WIN", LoadSceneMode.Single);
+
         }
 
     }
