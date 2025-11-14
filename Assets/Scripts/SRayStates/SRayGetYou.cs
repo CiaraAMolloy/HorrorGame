@@ -45,10 +45,16 @@ public class SRayGetYou : SRayState
         //if player gets away from stingray's range
         //stingray returns
 
+        //stingray has a sort of radius in which player can enter
+        //upon entering radius, stingray creates a goal of player
+
         //if dist from patrol section > range, return patrol
 
         goal = GameObject.FindGameObjectWithTag("player").transform.position;
         //locates player, sets as destination
+
+        //using same code from patrol, but adjusting it for the player.
+
 
         transform.parent.parent.LookAt(player.transform.position);
 

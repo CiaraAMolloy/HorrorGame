@@ -52,4 +52,7 @@ public class SRayPatrol : SRayState
 
         destPoint = (destPoint + 1) % points.Length;
     }
+
+    //has player entered radius
+
 }
