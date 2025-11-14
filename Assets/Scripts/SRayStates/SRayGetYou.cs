@@ -52,6 +52,6 @@ public class SRayGetYou : SRayState
 
         transform.parent.parent.LookAt(player.transform.position);
 
-        return this;
+            return this;
     }
 }

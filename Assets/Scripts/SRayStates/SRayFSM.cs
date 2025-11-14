@@ -78,7 +78,7 @@ public class SRayFSM : MonoBehaviour
             newPlayerContact = true;
         }
 
-        if (other.CompareTag("stingray"))
+        if (other.CompareTag("Enemy"))
         {
             //Enemy in contact with the player
             newRayContact = true;

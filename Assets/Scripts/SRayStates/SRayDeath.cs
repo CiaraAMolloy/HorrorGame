@@ -32,7 +32,6 @@ public class SRayDeath : SRayState
 
     public void DespawnSRay()
     {
-
-        Destroy(this.transform.parent.transform.parent.gameObject);
+        Destroy(stingray);
     }
 }
