@@ -127,6 +127,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012194233168, guid: 21ece59da74e9154faaad84d39776d64, type: 3}
   m_PrefabInstance: {fileID: 1534190228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &63604964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63604965}
+  - component: {fileID: 63604966}
+  m_Layer: 0
+  m_Name: SRayDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63604965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63604964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1295992375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63604966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63604964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a515777717626c458d8105ff7d5afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDir: {x: 0, y: 0, z: 0}
+  raySpeed: 0
+  isGrounded: 0
+  isPlayerContact: 0
+  isRayContact: 0
+  isPlayerSeen: 0
+  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
 --- !u!1 &65237484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,8 +2594,8 @@ MonoBehaviour:
   isPlayerSeen: 0
   patrol: {fileID: 0}
   sting: {fileID: 0}
-  SRay: {fileID: 0}
-  player: {fileID: 0}
+  SRay: {fileID: 2660233463055785724}
+  player: {fileID: 2141920726}
 --- !u!4 &580946694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3455652856686585101, guid: 6230db23778ad604fadc286c72f4a5bd, type: 3}
@@ -3820,50 +3871,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &893983708
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 893983709}
-  - component: {fileID: 893983710}
-  m_Layer: 0
-  m_Name: SRayStingYou
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &893983709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893983708}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1295992375}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &893983710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893983708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a56213ba23b7a2f409eec938f3aa6035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &913833537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,8 +5612,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1157442845}
-  - {fileID: 893983709}
   - {fileID: 580941300}
+  - {fileID: 63604965}
   m_Father: {fileID: 2660233463055785727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297444508
@@ -10873,6 +10880,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1474358422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141920726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7169622168415101917, guid: 143931edc377a664eb1bbe161def6275, type: 3}
+  m_PrefabInstance: {fileID: 30598433521270864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &30598433521270864
 PrefabInstance:
   m_ObjectHideFlags: 0
