@@ -7,7 +7,7 @@ public class SRayGetYou : SRayState
 {
     //different states itll transfer to
     public SRayPatrol patrol;
-    public SRayStingYou sting;
+    public SRayDeath sting;
 
     public GameObject SRay;
     public GameObject player;

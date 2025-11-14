@@ -7,7 +7,6 @@ public class SRayPatrol : SRayState
 {
     //the states it'll swap to
     public SRayGetYou SRGY;
-    public SRayStingYou SRSY;
 
     // this is going to be the initial state the ray stays in.
     public Transform[] points;
@@ -31,8 +30,13 @@ public class SRayPatrol : SRayState
 
         //Unity doc states disabling auto braking allows for continuous
         //movement btwn points (agent doesnt slow down when reaching point)
+        agent.autoBraking = false;
 
-        GotoNextPoint();
+        //chooses new point if nearby current one.
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            GotoNextPoint();
+        }
 
         return this;
     }
