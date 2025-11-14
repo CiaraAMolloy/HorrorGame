@@ -53,9 +53,6 @@ public class SRayGetYou : SRayState
         goal = GameObject.FindGameObjectWithTag("player").transform.position;
         //locates player, sets as destination
 
-        //using same code from patrol, but adjusting it for the player.
-
-
         transform.parent.parent.LookAt(player.transform.position);
 
             return this;
