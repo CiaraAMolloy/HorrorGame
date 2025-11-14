@@ -6,10 +6,17 @@ public class Stunned : State
 {//what go
     public RandomPatrol Patrol;
     public int StunTime=10;
-    public float Counter=0.0f;
+    public float Counter = 0.0f;
+    public UnityEngine.AI.NavMeshAgent agent;
+
     //run
     public override State RunCurrentState()
     {
+        if (agent.hasPath)
+        {
+            agent.ResetPath(); 
+        }
+        Debug.Log("stun!!!!!");
         //this will go a certain length then back to patrol
         if (Counter < StunTime)
         {

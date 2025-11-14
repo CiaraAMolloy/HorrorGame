@@ -11,7 +11,7 @@ public class Logic : MonoBehaviour
    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
 
-    string[] PartsCollected = new string[5];
+    string[] PartsCollected = new string[6];
     int numberofpartscollected = 0;
    public float sus = 1;
 
@@ -29,10 +29,12 @@ public class Logic : MonoBehaviour
 
 
 public void hit(){
-if(chasing){
-    isHit=true;
-    clang.Play();
-}}
+        if (chasing)
+        {
+            isHit = true;
+           
+        }
+}
 public void hitadressed(){
     isHit=false;
 }
@@ -67,17 +69,18 @@ public bool getisHit(){
         PartsCollected[numberofpartscollected]=name;
         numberofpartscollected++;
 
-        if (numberofpartscollected==5)
+        if (numberofpartscollected==6)
         {
             Debug.Log("win game");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("You won", LoadSceneMode.Single);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("WIN", LoadSceneMode.Single);
+
         }
 
     }
     public void trigGameOver()
     {
         Debug.Log("Game Over");
-       UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
        public void retry()
     {

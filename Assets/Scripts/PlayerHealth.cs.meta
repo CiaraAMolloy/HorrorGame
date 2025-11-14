@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 7a515777717626c458d8105ff7d5afe5
+guid: 42b85713ee9e125499f0bc0e0cdaa260
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - SRSY: {instanceID: 0}
-  - stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

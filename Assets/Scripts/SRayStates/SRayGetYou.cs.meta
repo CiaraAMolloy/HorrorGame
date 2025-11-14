@@ -3,7 +3,11 @@ guid: 4d9faa6e8fe0f574aabcc0d6711da223
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - patrol: {instanceID: 0}
+  - sting: {instanceID: 0}
+  - SRay: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  - player: {fileID: 7169622168415101917, guid: 143931edc377a664eb1bbe161def6275, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

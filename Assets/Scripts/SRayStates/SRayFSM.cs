@@ -60,8 +60,8 @@ public class SRayFSM : MonoBehaviour
                     return "Swimmin";
                 case SRayGetYou:
                     return "watch out man hes gonna getcha";
-                case SRayStingYou:
-                    return "oooh it stiiings";
+                /*case SRayStingYou:
+                    return "oooh it stiiings";*/
                 case SRayDeath:
                     return "oh one of em is dead";
             }

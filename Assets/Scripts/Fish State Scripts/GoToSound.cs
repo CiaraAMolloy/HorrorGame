@@ -12,10 +12,20 @@ public class GoToSound : State
     public Logic l;
     private UnityEngine.AI.NavMeshAgent agent;
     Vector3 thispos;
+    Vector3 goal;
+
+    bool pathpossible;
+    void start()
+    {
+        
+    }
 
     //run
     public override State RunCurrentState()
-    {       agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
+    {
+        var path = new UnityEngine.AI.NavMeshPath();
+    
+        agent =GameObject.FindGameObjectWithTag("fishman").GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         thispos=GameObject.FindGameObjectWithTag("fishman").transform.position;
         
@@ -24,21 +34,37 @@ public class GoToSound : State
             //if "sees" player
             return GGY;
         }
-       
-        Vector3 goal=l.GetmostRecentsound();
-//Debug.Log(goal);
-//Debug.Log(Vector3.Distance(goal, thispos));
-// operator ==(Vector3 lhs, Vector3 rhs)
 
-        if ( Vector3.Distance(goal, thispos)<2)
-        { //After find sound patrol
-       // Debug.Log("yay");
-            return Patrol;
-            
+
+        //pathpossible = agent.CalculatePath(l.GetmostRecentsound(), path);
+         agent.CalculatePath(l.GetmostRecentsound(), path);
+        switch (path.status)
+        {
+            case UnityEngine.AI.NavMeshPathStatus.PathComplete:
+                
+                agent.SetPath(path);
+                goal = l.GetmostRecentsound();
+                break;
+            case UnityEngine.AI.NavMeshPathStatus.PathPartial:
+               // Debug.Log("partial path.");
+                // return Patrol;      
+                  
+                break;
+            default:
+                //return Patrol;
+                break;
+              
+                
         }
-        agent.SetDestination(goal);
 
-      
+
+        if (Vector3.Distance(goal, thispos) < 2)
+        {
+            return Patrol;
+
+        }
+
+     
 
 
         return this;

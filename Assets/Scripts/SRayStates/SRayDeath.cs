@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SRayDeath : SRayState
 {
-    // to be fair, this isnt really too necessary for just exclusively the rays
-    // but it helps it so that if the rays are stuck in a something,
-    // they just retreat to this then they're capable of switching yet again.
+    public GameObject stingray;
+
+    private bool stung = false; //to just establish the stinging
 
     public override SRayState Run()
     {
@@ -21,14 +21,26 @@ public class SRayDeath : SRayState
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
 
-        //Focus on Despawning first
-        Debug.Log("STINGRAY DOWN");
-        DespawnSRay();
+        //moving stinging to here.
+        if (stung == false)
+        {
+            Debug.Log("player's been stung! yeowch!");
+            //player takes 5 damage
+            stung = true;
+
+            //if stung = true, death state.
+            if (stung == true)
+            {
+                Debug.Log("STINGRAY DOWN");
+                DespawnSRay();
+            }
+        }
+
         return this;
     }
 
     public void DespawnSRay()
     {
-        Destroy(transform.parent.parent.gameObject);
+        Destroy(this.transform.parent.transform.parent.gameObject);
     }
 }

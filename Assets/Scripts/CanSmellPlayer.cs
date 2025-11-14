@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script : MonoBehaviour
+public class CanSmellPlayer : MonoBehaviour
 {   public Logic l;
 void Start()
     {
