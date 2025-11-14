@@ -5778,9 +5778,9 @@ MonoBehaviour:
   raySpeed: 0
   isGrounded: 0
   isPlayerContact: 0
-  isRayContact: 0
+  isRayContact: 1
   isPlayerSeen: 0
-  SRSY: {fileID: 0}
+  SRSY: {fileID: 893983710}
   stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
 --- !u!1 &1135013104 stripped
 GameObject:
@@ -12495,14 +12495,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9697418a4b020479cde4efc02917f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 0}
+  current: {fileID: 1099615112}
   newRayDir: {x: 0, y: 0, z: 0}
   newRaySpeed: 0
   newIsGrounded: 0
   newPlayerContact: 0
   newRayContact: 0
   newPlayerSeen: 0
-  player: {fileID: 0}
+  player: {fileID: 956592690}
 --- !u!195 &2660233463055785726
 NavMeshAgent:
   m_ObjectHideFlags: 0
