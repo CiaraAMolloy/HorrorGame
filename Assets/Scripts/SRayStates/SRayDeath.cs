@@ -6,7 +6,7 @@ public class SRayDeath : SRayState
 {
     public GameObject stingray;
 
-    private bool stung = false; //to just establish the stinging
+    private bool stung = false; 
 
     public override SRayState Run()
     {
