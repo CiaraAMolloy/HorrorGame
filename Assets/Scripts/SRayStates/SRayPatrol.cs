@@ -40,6 +40,12 @@ public class SRayPatrol : SRayState
         {
             GotoNextPoint();
         }
+        
+        if (isPlayerSeen)
+        {
+          //  goal = GameObject.FindGameObjectWithTag("Player").transform.position;
+          return SRGY;
+                  }
 
         if (isPlayerContact)
         {
