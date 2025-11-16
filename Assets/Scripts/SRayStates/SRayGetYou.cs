@@ -36,10 +36,10 @@ public class SRayGetYou : SRayState
         //if player gets away from stingray's range
         //stingray goes back to patrol
 
-        if (isPlayerSeen)
-        {
+        //if (isPlayerSeen)
+        //{
             goal = GameObject.FindGameObjectWithTag("Player").transform.position;
-        }
+        //}
             var path = new UnityEngine.AI.NavMeshPath();
         //locates player, sets as destination
 
@@ -68,7 +68,6 @@ public class SRayGetYou : SRayState
         {
             return sting; //swaps to sting state
         }
-
 
             return this;
     }

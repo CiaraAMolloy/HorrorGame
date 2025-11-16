@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 public class SRayPatrol : SRayState
 {
     //the states it'll swap to
     public SRayGetYou SRGY;
+    public SRayDeath sting;
 
     // this is going to be the initial state the ray stays in.
     public Transform[] points;
@@ -38,6 +41,18 @@ public class SRayPatrol : SRayState
             GotoNextPoint();
         }
 
+        if (isPlayerContact)
+        {
+            Debug.Log("owwwwww");
+            return sting;
+        }
+
+        if (isPlayerSeen)
+        {
+            Debug.Log("GET EM");
+            return SRGY;
+        }
+
         return this;
     }
 
@@ -52,6 +67,8 @@ public class SRayPatrol : SRayState
 
         destPoint = (destPoint + 1) % points.Length;
     }
+
+    
 
     //has player entered radius
 

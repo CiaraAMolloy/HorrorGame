@@ -6418,6 +6418,7 @@ MonoBehaviour:
   isRayContact: 0
   isPlayerSeen: 0
   SRGY: {fileID: 580941301}
+  sting: {fileID: 63604966}
   points:
   - {fileID: 552716289}
   - {fileID: 65237485}
@@ -13444,7 +13445,7 @@ MonoBehaviour:
   newPlayerContact: 0
   newRayContact: 0
   newPlayerSeen: 0
-  player: {fileID: 0}
+  player: {fileID: 2141920726}
 --- !u!195 &2660233463055785726
 NavMeshAgent:
   m_ObjectHideFlags: 0
