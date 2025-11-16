@@ -23,7 +23,27 @@ public class isDeadQ : MonoBehaviour
             l.trigGameOver();
         }
 
-        if (collision.gameObject.name == "sraycollider") {
+      /*  if (collision.gameObject.name == "stingray") {
+            Debug.Log("Entered collision with " + collision.gameObject.name);
+            Debug.Log("Damage taken!");
+
+            currentHealth.changeHealth(-5);
+        }*/
+
+    }
+    private void  OnTriggerEnter(Collider collision)//exit or stay
+    {
+        Debug.Log(collision.gameObject.name);
+        
+
+      /*  if (collision.gameObject.name == "Fishmancollider")
+        {
+            Debug.Log("Entered collision with " + collision.gameObject.name);
+            Debug.Log("AAAAAAh dead");
+            l.trigGameOver();
+        }*/
+
+        if (collision.gameObject.name == "stingray") {
             Debug.Log("Entered collision with " + collision.gameObject.name);
             Debug.Log("Damage taken!");
 
