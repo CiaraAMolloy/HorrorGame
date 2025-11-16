@@ -63,7 +63,7 @@ public class SRayGetYou : SRayState
 
         transform.parent.parent.LookAt(player.transform.position);
 
-        //here is the actual. oh wow player got hit thing
+        //here is the actual. oh wow player got touched thing
         if (isPlayerContact)
         {
             return sting; //swaps to sting state
