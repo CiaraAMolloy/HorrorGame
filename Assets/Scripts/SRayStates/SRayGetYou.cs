@@ -9,7 +9,7 @@ public class SRayGetYou : SRayState
     public SRayPatrol patrol;
     public SRayDeath sting;
 
-    public GameObject SRay;
+    public GameObject stingray;
     public GameObject player;
     private NavMeshAgent agent;
     Vector3 goal;
@@ -33,27 +33,34 @@ public class SRayGetYou : SRayState
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
 
-        //if ray is in contact with player, STING!
-        //GET HIS ASS
-
-        if (isPlayerContact) 
-        {
-            Debug.Log("SEIZE HIM!");
-            return sting;
-        }
-
         //if player gets away from stingray's range
-        //stingray returns
-
-        //stingray has a sort of radius in which player can enter
-        //upon entering radius, stingray creates a goal of player
-
-        //if dist from patrol section > range, return patrol
+        //stingray goes back to patrol
 
         goal = GameObject.FindGameObjectWithTag("player").transform.position;
+        var path = new UnityEngine.AI.NavMeshPath();
         //locates player, sets as destination
 
+        //creates a path for locating player to follow them
+
+        agent.CalculatePath(goal, path);
+        switch (path.status)
+        {
+            case UnityEngine.AI.NavMeshPathStatus.PathComplete: //stingray gets you
+                agent.SetPath(path);
+                break;
+            case UnityEngine.AI.NavMeshPathStatus.PathPartial: // can only get a certain point
+                agent.SetPath(path);
+                break;
+            case UnityEngine.AI.NavMeshPathStatus.PathInvalid: //cant get you
+                agent.SetPath(path);
+                return patrol;
+            default:
+                break;
+        }
+
         transform.parent.parent.LookAt(player.transform.position);
+
+        //here is the actual. oh wow player got hit thing
 
             return this;
     }

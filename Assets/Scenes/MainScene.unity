@@ -2592,9 +2592,9 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  patrol: {fileID: 0}
-  sting: {fileID: 0}
-  SRay: {fileID: 2660233463055785724}
+  patrol: {fileID: 1157442846}
+  sting: {fileID: 63604966}
+  stingray: {fileID: 2660233463055785724}
   player: {fileID: 2141920726}
 --- !u!4 &580946694 stripped
 Transform:
@@ -11101,7 +11101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9697418a4b020479cde4efc02917f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 1157442846}
+  current: {fileID: 580941301}
   newRayDir: {x: 0, y: 0, z: 0}
   newRaySpeed: 0
   newIsGrounded: 0
