@@ -45,18 +45,12 @@ public class SRayPatrol : SRayState
         {
           //  goal = GameObject.FindGameObjectWithTag("Player").transform.position;
           return SRGY;
-                  }
+        }
 
         if (isPlayerContact)
         {
             Debug.Log("owwwwww");
             return sting;
-        }
-
-        if (isPlayerSeen)
-        {
-            Debug.Log("GET EM");
-            return SRGY;
         }
 
         return this;
