@@ -17,7 +17,7 @@ public class SRayGetYou : SRayState
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
+        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
     }
 
     public override SRayState Run()
@@ -36,8 +36,11 @@ public class SRayGetYou : SRayState
         //if player gets away from stingray's range
         //stingray goes back to patrol
 
-        goal = GameObject.FindGameObjectWithTag("player").transform.position;
-        var path = new UnityEngine.AI.NavMeshPath();
+        if (isPlayerSeen)
+        {
+            goal = GameObject.FindGameObjectWithTag("Player").transform.position;
+        }
+            var path = new UnityEngine.AI.NavMeshPath();
         //locates player, sets as destination
 
         //creates a path for locating player to follow them
@@ -61,6 +64,11 @@ public class SRayGetYou : SRayState
         transform.parent.parent.LookAt(player.transform.position);
 
         //here is the actual. oh wow player got hit thing
+        if (isPlayerContact)
+        {
+            return sting; //swaps to sting state
+        }
+
 
             return this;
     }

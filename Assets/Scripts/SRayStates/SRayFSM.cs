@@ -41,6 +41,14 @@ public class SRayFSM : MonoBehaviour
             current = next;
         }
 
+        if (Physics.Linecast(transform.position, player.transform.position, out ray))
+        {
+            if (ray.collider.CompareTag("Player"))
+            {
+                newPlayerSeen = true;
+            }
+        }
+
     }
 
     public SRayState getCurrentState()
