@@ -11,13 +11,13 @@ public class SRayGetYou : SRayState
 
     public GameObject stingray;
     public GameObject player;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     Vector3 goal;
 
     public void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
     }
 
     public override SRayState Run()
@@ -36,7 +36,7 @@ public class SRayGetYou : SRayState
         //if player gets away from stingray's range
         //stingray goes back to patrol
 
-        goal = GameObject.FindGameObjectWithTag("player").transform.position;
+        goal = GameObject.FindGameObjectWithTag("Player").transform.position;
         var path = new UnityEngine.AI.NavMeshPath();
         //locates player, sets as destination
 
