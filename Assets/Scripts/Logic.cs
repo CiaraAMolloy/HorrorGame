@@ -7,16 +7,16 @@ using UnityEngine.SceneManagement;
 public class Logic : MonoBehaviour
 {
     public Transform trackedAgent;
-   public bool HeardASound;
-   public Vector3 mostRecentsound;
+    public bool HeardASound;
+    public Vector3 mostRecentsound;
     List<GameObject> unheardsounds;
 
     string[] PartsCollected = new string[6];
     int numberofpartscollected = 0;
-   public float sus = 1;
+    public float sus = 1;
 
-   bool chasing=false;
-   bool isHit=false;
+    bool chasing=false;
+    bool isHit=false;
     public AudioSource clang;
 
     private bool bloodDetected = false;
@@ -118,7 +118,6 @@ public bool getisHit(){
     public void AddSus(float time){
         sus+=time;
     }
-
 
     public void setChasing(bool tf){
         chasing=tf;
