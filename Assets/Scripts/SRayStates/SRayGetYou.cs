@@ -14,7 +14,7 @@ public class SRayGetYou : SRayState
     private NavMeshAgent agent;
     Vector3 goal;
 
-    public void Start()
+    private void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();

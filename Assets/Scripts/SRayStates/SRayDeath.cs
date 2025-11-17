@@ -31,6 +31,7 @@ public class SRayDeath : SRayState
             //if stung = true, death state.
             if (stung == true)
             {
+                stung = false; //to reset it, kinda
                 Debug.Log("STINGRAY DOWN");
                 DespawnSRay();
             }

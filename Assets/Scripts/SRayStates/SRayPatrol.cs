@@ -9,12 +9,20 @@ public class SRayPatrol : SRayState
 {
     //the states it'll swap to
     public SRayGetYou SRGY;
-    public SRayDeath sting;
 
     // this is going to be the initial state the ray stays in.
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+
+    private void Start()
+    {
+        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
+
+        //Unity doc states disabling auto braking allows for continuous
+        //movement btwn points (agent doesnt slow down when reaching point)
+        agent.autoBraking = false;
+    }
 
     public override SRayState Run()
     {
@@ -29,28 +37,15 @@ public class SRayPatrol : SRayState
         this.isPlayerContact = isPlayerContact;
         this.isPlayerSeen = isPlayerSeen;
 
-        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
-
-        //Unity doc states disabling auto braking allows for continuous
-        //movement btwn points (agent doesnt slow down when reaching point)
-        agent.autoBraking = false;
-
-        //chooses new point if nearby current one.
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-        {
-            GotoNextPoint();
-        }
         
         if (isPlayerSeen)
         {
           //  goal = GameObject.FindGameObjectWithTag("Player").transform.position;
-          return SRGY;
-        }
 
-        if (isPlayerContact)
+          return SRGY;
+        } else if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
-            Debug.Log("owwwwww");
-            return sting;
+            GotoNextPoint();
         }
 
         return this;
