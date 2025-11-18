@@ -9,6 +9,7 @@ public class SRayGetYou : SRayState
     public SRayPatrol patrol;
     public SRayDeath sting;
 
+
     public GameObject stingray;
     public GameObject player;
     private NavMeshAgent agent;
@@ -36,11 +37,9 @@ public class SRayGetYou : SRayState
         //if player gets away from stingray's range
         //stingray goes back to patrol
 
-       // if (isPlayerSeen)
-        //{
             goal = GameObject.FindGameObjectWithTag("Player").transform.position;
-       // }
             var path = new UnityEngine.AI.NavMeshPath();
+
         //locates player, sets as destination
 
         //creates a path for locating player to follow them

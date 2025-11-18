@@ -14,6 +14,7 @@ public class SRayPatrol : SRayState
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    public CanSeePlayer csp;
 
     private void Start()
     {
@@ -38,11 +39,11 @@ public class SRayPatrol : SRayState
         this.isPlayerSeen = isPlayerSeen;
 
         
-        if (isPlayerSeen)
+        if (csp.getisplseen())
         {
           //  goal = GameObject.FindGameObjectWithTag("Player").transform.position;
+            return SRGY;
 
-          return SRGY;
         } else if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
             GotoNextPoint();

@@ -6514,6 +6514,7 @@ MonoBehaviour:
   - {fileID: 552716289}
   - {fileID: 65237485}
   - {fileID: 1918097157}
+  csp: {fileID: 1821490578}
 --- !u!1 &1166316916
 GameObject:
   m_ObjectHideFlags: 0
@@ -11125,6 +11126,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821490576}
+  - component: {fileID: 1821490578}
+  - component: {fileID: 1821490577}
   m_Layer: 0
   m_Name: sraycollider
   m_TagString: Untagged
@@ -11141,12 +11144,49 @@ Transform:
   m_GameObject: {fileID: 1821490575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.00000047684, y: 0, z: -0.00000095367}
+  m_LocalScale: {x: 7.703316, y: 7.703316, z: 7.703316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2660233463055785727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1821490577
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821490575}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1821490578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821490575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l: {fileID: 1350818515}
+  isPlayerSeen: 0
 --- !u!1 &1832248123
 GameObject:
   m_ObjectHideFlags: 0
@@ -13613,7 +13653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9697418a4b020479cde4efc02917f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 580941301}
+  current: {fileID: 1157442846}
   newRayDir: {x: 0, y: 0, z: 0}
   newRaySpeed: 0
   newIsGrounded: 0

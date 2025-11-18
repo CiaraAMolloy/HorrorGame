@@ -28,4 +28,7 @@ public class CanSeePlayer : MonoBehaviour
             isPlayerSeen=false;
         }
     }
+    public bool getisplseen() {
+        return isPlayerSeen;
+    }
 }
