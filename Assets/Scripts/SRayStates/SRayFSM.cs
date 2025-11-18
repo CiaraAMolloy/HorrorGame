@@ -78,15 +78,15 @@ public class SRayFSM : MonoBehaviour
     }
 
     //triggers for the player having contact with the enemy
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (other.collider.CompareTag("Player"))
+        {  
             Debug.Log("Player in contact with Bee");
             newPlayerContact = true;
         }
 
-        if (other.CompareTag("stingray"))
+        if (other.collider.CompareTag("stingray"))
         {
             //Enemy in contact with the player
             newRayContact = true;
@@ -94,14 +94,14 @@ public class SRayFSM : MonoBehaviour
 
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.collider.CompareTag("Player"))
         {
             Debug.Log("NOT in contact with the Ray");
             newPlayerContact = false;
         }
-        if (other.CompareTag("stingray"))
+        if (other.collider.CompareTag("stingray"))
         {
             //Enemy not in contact
             newRayContact = false;
