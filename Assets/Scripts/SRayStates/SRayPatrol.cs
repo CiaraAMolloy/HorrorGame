@@ -13,12 +13,12 @@ public class SRayPatrol : SRayState
     // this is going to be the initial state the ray stays in.
     public Transform[] points;
     private int destPoint = 0;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     public CanSeePlayer csp;
 
     private void Start()
     {
-        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
+        //agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
 
         //Unity doc states disabling auto braking allows for continuous
         //movement btwn points (agent doesnt slow down when reaching point)

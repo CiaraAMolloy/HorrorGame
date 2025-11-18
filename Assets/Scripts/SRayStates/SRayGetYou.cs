@@ -12,13 +12,13 @@ public class SRayGetYou : SRayState
 
     public GameObject stingray;
     public GameObject player;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     Vector3 goal;
 
     private void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
+       // agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
     }
 
     public override SRayState Run()
