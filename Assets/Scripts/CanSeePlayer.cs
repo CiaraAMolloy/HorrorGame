@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CanSeePlayer : MonoBehaviour
 {
-    public Logic l;
+    //public Logic l;
     public bool isPlayerSeen;
     void Start()
     {
-        l = GameObject.FindGameObjectWithTag("Logic").GetComponent<Logic>();
+        //l = GameObject.FindGameObjectWithTag("Logic").GetComponent<Logic>();
     }
 
     public void OnTriggerEnter(Collider src)

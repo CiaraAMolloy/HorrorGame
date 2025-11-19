@@ -577,7 +577,7 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  stingray: {fileID: 1621257614}
 --- !u!4 &149038028
 Transform:
   m_ObjectHideFlags: 0
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  stingray: {fileID: 1154863670}
 --- !u!4 &254655611
 Transform:
   m_ObjectHideFlags: 0
@@ -7863,7 +7863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!136 &1166109012
 CapsuleCollider:
@@ -8310,7 +8309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!136 &1278789495
 CapsuleCollider:
@@ -10559,7 +10557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!136 &1543425766
 CapsuleCollider:
@@ -10660,7 +10657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!136 &1559785344
 CapsuleCollider:
@@ -11962,7 +11958,7 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  stingray: {fileID: 109955456}
 --- !u!4 &1693916700
 Transform:
   m_ObjectHideFlags: 0
@@ -12682,7 +12678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!136 &1759141693
 CapsuleCollider:
@@ -13381,7 +13376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29c0b36b82929d4081c347884e43a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l: {fileID: 1350818515}
   isPlayerSeen: 0
 --- !u!1 &1832248123
 GameObject:
@@ -15362,7 +15356,7 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  stingray: {fileID: 929566545}
 --- !u!4 &2026143280
 Transform:
   m_ObjectHideFlags: 0
@@ -15829,7 +15823,7 @@ MonoBehaviour:
   isPlayerContact: 0
   isRayContact: 0
   isPlayerSeen: 0
-  stingray: {fileID: 7405111332225146923, guid: 42945210bde988340aaa2fd81cdc2c6d, type: 3}
+  stingray: {fileID: 536006933}
 --- !u!4 &2121952636
 Transform:
   m_ObjectHideFlags: 0
@@ -16090,7 +16084,7 @@ PrefabInstance:
       objectReference: {fileID: 1350818514}
     - target: {fileID: 1449976546629318878, guid: 143931edc377a664eb1bbe161def6275, type: 3}
       propertyPath: bloodTimer
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1449976546629318878, guid: 143931edc377a664eb1bbe161def6275, type: 3}
       propertyPath: initialDetectionRange
