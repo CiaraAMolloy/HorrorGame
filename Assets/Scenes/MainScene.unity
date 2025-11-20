@@ -106,7 +106,7 @@ NavMeshSettings:
     serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
+    agentHeight: 10
     agentSlope: 5.8
     agentClimb: 0.45
     ledgeDropHeight: 0
@@ -15184,6 +15184,10 @@ PrefabInstance:
     - target: {fileID: 3301494921934813927, guid: 535205951760e9a4d8c424bf113dd341, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354980861466906427, guid: 535205951760e9a4d8c424bf113dd341, type: 3}
+      propertyPath: m_Height
+      value: 0.175
       objectReference: {fileID: 0}
     - target: {fileID: 3354980861466906427, guid: 535205951760e9a4d8c424bf113dd341, type: 3}
       propertyPath: m_BaseOffset

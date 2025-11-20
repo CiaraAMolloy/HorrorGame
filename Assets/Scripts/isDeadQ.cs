@@ -43,12 +43,12 @@ public class isDeadQ : MonoBehaviour
             l.trigGameOver();
         }*/
 
-     /*   if (collision.gameObject.name == "stingray") {
+        if (collision.gameObject.name == "stingray") {
             Debug.Log("Entered collision with " + collision.gameObject.name);
             Debug.Log("Damage taken!");
 
             currentHealth.changeHealth(-5);
-        }*/
+        }
 
     }
     
