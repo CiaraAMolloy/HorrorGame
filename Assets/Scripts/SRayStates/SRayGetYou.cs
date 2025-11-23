@@ -15,10 +15,16 @@ public class SRayGetYou : SRayState
     public NavMeshAgent agent;
     Vector3 goal;
 
-    private void Start() 
+    //setting up a timer for the length of a chase 
+    //sray should abandon after 5 seconds.
+
+    private float srayCTime = 5f; //length of time itll chase for
+    private float srayTimer; // timer
+
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-       // agent = GameObject.FindGameObjectWithTag("stingray").GetComponent<NavMeshAgent>();
+        srayTimer = srayCTime;
     }
 
     public override SRayState Run()
@@ -60,7 +66,18 @@ public class SRayGetYou : SRayState
                 break;
         }
 
-        transform.parent.parent.LookAt(player.transform.position);
+        //timer for chasing player
+        if (srayTimer < srayCTime)
+        {
+            srayTimer += Time.deltaTime;
+        }
+        else
+        {
+            srayTimer = 0;
+            return patrol; //patrols again once timer ends
+        }
+
+            transform.parent.parent.LookAt(player.transform.position);
 
         //here is the actual. oh wow player got touched thing
         if (isPlayerContact)
