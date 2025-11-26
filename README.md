@@ -12,8 +12,12 @@ Zip file to download:
 https://drive.google.com/drive/folders/1ZaJQY5Zu6l3sm4p2u4lWVmgG35JkjABP?usp=drive_link
 
 Controls:
+
 [WASD] to move
+
 [Shift] to sprint
+
 [space] to jump
+
 [y] to yell
 
