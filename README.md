@@ -1,7 +1,6 @@
 # Bloodletting
 
-Horror game where you must collect parts to win while avoiding the fishman and the sting rays.
-
+Horror game where you must collect radio parts to escape the obsessive Fishman and his stingray minions!
 Installation
 1) Download the zip file
 2) Extract the contents of the zip file into one singular folder of your choice
