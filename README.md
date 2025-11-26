@@ -1,6 +1,6 @@
 Fish game
 
-Horror game where you must collect parts to win and avoid the fishman and the sting rays.
+Horror game where you must collect parts to win while avoiding the fishman and the sting rays.
 
 Installation
 1) Download the zip file
